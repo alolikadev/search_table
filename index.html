@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <link href="css/search.css" rel="stylesheet" />
+    
+</head>
+<body>
+
+    <div class="container">
+            <div id="myProgress" class="progress progress-bar progress-bar-success progress-bar-striped active" role="progressbar">
+                <div id="myBar"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <div class="input-group">
+                        <div class="input-group-btn search-panel">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span id="search_concept">Filter by</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#first_name">First Name </a></li>
+                                <li><a href="#last_name">Last Name </a></li>
+                                <li><a href="#first_last_name">Both First & Last name </a></li>
+                                <li><a href="#default_name">Default</a></li>
+                            </ul>
+                        </div>
+                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        <input type="text" class="form-control" id="search" name="x" placeholder="Search term...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="search_btn"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row table-responsive">
+                <h2 class="text-center">List of Names</h2>
+                <!--<p>Using all the table classes on one table:</p>-->
+                <div id="filtered_table" class="filtered_table"></div>
+            </div>
+        </div>
+    <script src="js/search.js"></script>
+
+</body>
+</html>

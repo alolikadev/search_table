@@ -1,0 +1,14 @@
+﻿body {
+    margin-top: 20px;
+}
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+    margin:20px 0;
+}
+
+#myBar {
+    width: 1%;
+    height: 8px;
+    background-color: #4CAF50;
+}
