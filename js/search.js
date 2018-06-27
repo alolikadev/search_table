@@ -47,52 +47,7 @@
         }
     });
 
-    //$("#search_btn").click(function () {
-
-    //    var input, filter, tr, td, i;
-
-    //    input = $('#search');
-    //    filter = input.val().toUpperCase();
-    //    console.log(filter);
-    //    tr = $("table tr");
-    //    if (input.val() == "") {
-    //        move();
-    //        populate_default_lists();
-    //    }
-    //    else {
-    //        for (i = 0; i < tr.length; i++) {
-
-    //            if (tr[i].getElementsByTagName("td")[1]) {
-    //                td = tr[i].getElementsByTagName("td")[1]; // <-- change number if you want other column to search
-    //                console.log(td.innerHTML.toUpperCase(filter));
-    //                if (td.innerHTML.toUpperCase(filter) == filter) {
-    //                    move();
-    //                    tr[i].style.display = "";
-    //                }
-                    
-    //                else {
-
-    //                    //tr[i].style.display = "none";
-    //                }
-    //            }
-    //             else if (tr[i].getElementsByTagName("td")[2]) {
-    //                    move();
-    //                    td = tr[i].getElementsByTagName("td")[2]; // <-- change number if you want other column to search
-    //                    console.log(td.innerHTML.toUpperCase(filter));
-    //                    if (td.innerHTML.toUpperCase(filter) == filter) {
-    //                        move();
-    //                        tr[i].style.display = "";
-    //                    }
-    //                    else {
-    //                        tr[i].style.display = "none";
-    //                    }
-    //                }
-    //        }
-    //    }
-
-
-    //});
-
+    
     function move() {
         var elem = document.getElementById("myBar");
         var width = 1;
@@ -143,12 +98,12 @@
         var $filtered_table = $('.filtered_table');
         $table.find('tbody').html('');
 
-        $.get('/html/default_table.html', function (data) { })
+        $.get('https://alolikadev.github.io/search_table/html/default_table.html', function (data) { })
             .done(function (data) {
                 var filtered_table = data;
                 var content = $filtered_table.append(filtered_table);
 
-                $.get('/html/default.html', function (data, content) { })
+                $.get('https://alolikadev.github.io/search_table/html/default.html', function (data, content) { })
                     .done(function (data) {
                        
                         var html = data;
@@ -198,12 +153,12 @@
         var $filtered_table = $('.filtered_table');
         $table.find('tbody').html('');
 
-        $.get('/html/first_name_tbl.html', function (data) { })
+        $.get('https://alolikadev.github.io/search_table/html/first_name_tbl.html', function (data) { })
             .done(function (data) {
                 var filtered_table = data;
                 var content = $filtered_table.append(filtered_table);
                 
-                $.get('/html/first_name.html', function (data, content) { })
+                $.get('https://alolikadev.github.io/search_table/html/first_name.html', function (data, content) { })
                     .done(function (data) {
 
                         var html = data;
@@ -251,12 +206,12 @@
         var $filtered_table = $('.filtered_table');
         $table.find('tbody').html('');
 
-        $.get('/html/last_name_tbl.html', function (data) { })
+        $.get('https://alolikadev.github.io/search_table/html/last_name_tbl.html', function (data) { })
             .done(function (data) {
                 var filtered_table = data;
                 var content = $filtered_table.append(filtered_table);
 
-                $.get('/html/last_name.html', function (data, content) { })
+                $.get('https://alolikadev.github.io/search_table/html/last_name.html', function (data, content) { })
                     .done(function (data) {
                         move();
                         
@@ -305,12 +260,12 @@
         var $filtered_table = $('.filtered_table');
         $table.find('tbody').html('');
 
-        $.get('/html/both_tbl.html', function (data) { })
+        $.get('https://alolikadev.github.io/search_table/html/both_tbl.html', function (data) { })
             .done(function (data) {
                 var filtered_table = data;
                 var content = $filtered_table.append(filtered_table);
 
-                $.get('/html/both.html', function (data, content) { })
+                $.get('https://alolikadev.github.io/search_table/html/both.html', function (data, content) { })
                     .done(function (data) {
                         move();
                         
