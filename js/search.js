@@ -26,7 +26,20 @@
         sortTable();
     });
 
-    $("#search_btn").on("click", function () {
+       $("#search_btn").on("click", function () {
+        search();
+    });
+
+    $('#search').keypress(function (e) {
+        var key = e.which;
+        if (key == 13)  // the enter key code
+        {
+            search();
+            return false;
+        }
+    });
+
+    function search() {
         var value = document.getElementById('search').value.toLowerCase().trim();
         console.log(value);
         if (value == "") {
@@ -37,7 +50,6 @@
         else {
             $("table tr").each(function (index) {
                 if (!index) return;
-                 move();
                 $(this).find("td").each(function () {
                     var id = $(this).text().toLowerCase().trim();
                     var not_found = (id.indexOf(value) == -1);
@@ -46,7 +58,7 @@
                 });
             });
         }
-    });
+    }
 
     
     function move() {
