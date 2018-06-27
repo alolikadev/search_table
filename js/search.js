@@ -37,6 +37,7 @@
         else {
             $("table tr").each(function (index) {
                 if (!index) return;
+                 move();
                 $(this).find("td").each(function () {
                     var id = $(this).text().toLowerCase().trim();
                     var not_found = (id.indexOf(value) == -1);
